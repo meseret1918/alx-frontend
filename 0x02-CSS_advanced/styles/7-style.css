@@ -1,6 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
-
 :root {
-    --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Updated base font-family */
+    --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Updated title font-family */
+}
+
+/* Set the body font-family to font-family-base */
+body {
+    font-family: var(--font-family-base);
+}
+
+/* Target all section headings (h1-h6) and set font-family to font-family-title */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
 }
