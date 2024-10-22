@@ -1,0 +1,13 @@
+.card-testimonial .card-quote {
+    position: relative;
+}
+
+.card-testimonial .card-quote::before {
+    content: '\201C'; /* Left double quotation mark */
+    position: absolute;
+    top: -4.5rem; /* Vertical position */
+    left: -1rem; /* Horizontal position */
+    color: #efeded; /* Foreground color */
+    font-size: 10rem; /* Font size */
+    z-index: -1; /* Z-order */
+}
