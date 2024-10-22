@@ -1,0 +1,8 @@
+:root {
+    --section-header-align: center;
+}
+
+/* Align section-header */
+.section-header {
+    text-align: var(--section-header-align);
+}
