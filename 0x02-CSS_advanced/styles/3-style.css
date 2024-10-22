@@ -1,0 +1,35 @@
+/* Define custom properties for the root element */
+:root {
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
+  }
+  
+  /* Reset the color for the body to the text-color */
+  body {
+    color: var(--text-color);
+  }
+  
+  /* Reset the color for all anchor elements to the text-color */
+  a {
+    color: var(--text-color);
+  }
+  
+  /* Reset the color for all elements with the class card-category to color-primary */
+  .card-category {
+    color: var(--color-primary);
+  }
+  
+  /* Reset the color for all elements with the class section-tagline to color-primary */
+  .section-tagline {
+    color: var(--color-primary);
+  }
+  
+  /* Hide all elements with the class visually-hidden */
+  .visually-hidden {
+    display: none;
+  }
+  
