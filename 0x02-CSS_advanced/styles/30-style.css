@@ -1,35 +1,58 @@
+/* Target card-outer within the card-work */
 .card-work .card-outer {
-    position: relative;
-    overflow: hidden;
+    position: relative; /* Relatively position the element */
+    overflow: hidden; /* Hide any overflow */
 }
 
+/* Target the image inside card-image inside card-work */
 .card-work .card-image img {
-    height: 30rem;
-    width: 100%;
-    object-fit: cover;
-    vertical-align: bottom;
+    height: 30rem; /* Set height */
+    width: 100%; /* Set width */
+    object-fit: cover; /* Cover the element */
+    object-position: bottom; /* Vertically align to the bottom */
 }
 
+/* Target card-inner inside card-work */
 .card-work .card-inner {
-    position: absolute;
-    top: -0.1rem;
-    left: -0.1rem;
-    right: -0.1rem;
-    z-index: 1;
+    position: absolute; /* Absolutely position the element */
+    top: -0.1rem; /* Vertical position */
+    left: -0.1rem; /* Horizontal position */
+    right: -0.1rem; /* Horizontal position */
+    z-index: 1; /* Set z-order */
 }
 
+/* Change background color on hover */
 .card-work:hover .card-inner {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* Set background color */
 }
 
+/* Target card-title inside card-work */
 .card-work .card-title {
-    text-align: center;
-    margin: 0;
-    opacity: 0; /* Change opacity to show on hover */
-    height: 100%;
-    position: relative;
+    text-align: center; /* Center align the text */
+    margin: 0; /* Margins all around should be 0 */
+    opacity: 0; /* Set opacity to its lowest value */
+    height: 100%; /* Height of the selected elements */
+    position: relative; /* Position should be relative */
 }
 
-.card-title a {
-    display: block; /* Ensure links are block-level */
+/* Target link inside card-title and card-work */
+.card-work .card-title a {
+    display: block; /* Ensure elements display as blocks */
+    text-decoration: none; /* Text should not be decorated */
+    padding-top: 45%; /* Padding on the top */
+}
+
+/* Create the after pseudo elements of the link inside card-title and card-work */
+.card-work .card-title a::after {
+    position: absolute; /* Absolutely position the selected elements */
+    top: 0; /* Top position */
+    right: 0; /* Right position */
+    left: 0; /* Left position */
+    bottom: 0; /* Bottom position */
+    content: ''; /* Content property with empty value */
+}
+
+/* Target card-title when card-work is hovered */
+.card-work:hover .card-title {
+    opacity: 1; /* Set opacity to 1 on hover */
 }
