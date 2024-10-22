@@ -1,16 +1,19 @@
-/* Ensure anchor links are styled */
-a[href] {
-    /* Default state */
+/* Target anchor elements containing hyperlinks */
+a {
+    font-style: italic; /* Italicize the text */
 }
 
-a[href]:visited {
-    font-style: italic;
+/* Target visited state */
+a:visited {
+    /* Add styles if needed, e.g., color */
 }
 
-a[href]:hover {
-    text-decoration: underline;
+/* Target hover state */
+a:hover {
+    text-decoration: underline; /* Underline the link when hovering */
 }
 
-a[href]:active {
-    background-color: var(--color-light-grey);
+/* Target active state */
+a:active {
+    background-color: var(--color-light-grey); /* Set the background color */
 }
