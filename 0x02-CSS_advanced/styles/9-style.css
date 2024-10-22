@@ -1,0 +1,4 @@
+/* Remove text decoration from links */
+a {
+    text-decoration: none;
+}
