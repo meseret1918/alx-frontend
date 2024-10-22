@@ -1,0 +1,43 @@
+/* Define custom properties for the root element */
+:root {
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
+    --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  
+  /* Set body's font-family to font-family-base */
+  body {
+    color: var(--text-color);
+    font-family: var(--font-family-base);
+  }
+  
+  /* Set font-family for all 6 levels of section headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+  }
+  
+  /* Reset the color for all anchor elements to the text-color */
+  a {
+    color: var(--text-color);
+  }
+  
+  /* Reset the color for all elements with the class card-category to color-primary */
+  .card-category {
+    color: var(--color-primary);
+  }
+  
+  /* Reset the color for all elements with the class section-tagline to color-primary */
+  .section-tagline {
+    color: var(--color-primary);
+  }
+  
+  /* Hide all elements with the class visually-hidden */
+  .visually-hidden {
+    display: none;
+  }
+  
