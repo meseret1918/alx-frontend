@@ -1,15 +1,17 @@
 :root {
-    --font-size-small: 1.2rem;      /* Small font size */
-    --font-size-medium: 1.6rem;     /* Medium font size */
-    --font-size-large: 1.8rem;      /* Large font size */
-    --font-size-x-large: 2.3rem;    /* Extra large font size */
-    --font-size-xx-large: 4.8rem;   /* Double extra large font size */
+    --font-size-small: 1.2rem; /* Custom property for small font size */
+    --font-size-medium: 1.6rem; /* Custom property for medium font size */
+    --font-size-large: 1.8rem; /* Custom property for large font size */
+    --font-size-x-large: 2.3rem; /* Custom property for extra-large font size */
+    --font-size-xx-large: 4.8rem; /* Custom property for double extra-large font size */
 }
 
+/* Set html font size to 62.5% of normal size */
 html {
-    font-size: 62.5%;  /* Set all fonts in the html element to 62.5% of their normal size */
+    font-size: 62.5%; /* Adjust base size for rem units */
 }
 
+/* Set body font size to font-size-medium */
 body {
-    font-size: var(--font-size-medium);  /* Set body font size to medium */
+    font-size: var(--font-size-medium);
 }
