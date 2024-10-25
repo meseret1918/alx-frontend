@@ -1,66 +1,73 @@
-
-html {
-	scroll-behavior: smooth;
-	font-size: 62.5%;
-}
-
-body {
-	color: var(--text-color);
-	font-family: var(--font-family-base);
-	font-size: var(--font-size-medium);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-base);
-
-}
-
-a{
-	color: #161616;
-  text-decoration: none;
-}
-
-.visually-hidden{
-	display: none;
-}
-
-.card-category{
-	color: var(--color-primary);
-}
-
-.section-header{
-  text-align: var(--section-header-align);
-}
-
-.section-tagline{
-	color: var(--color-primary);
-  font-family: var(--font-family-title);
-  text-transform: var(--section-tagline-transform);
-  font-weight: var(--font-weight-bold);
-}
-
-h1 h2 h3 h4 h5 h6{
-	font-family: var(--font-family-title);
-  font-weight: var(--font-weight-bold);
-}
-
+/* Define custom properties for the root element */
 :root {
-  --color-primary: #D73953;
-  --color-black: #090909;
-  --color-white: #ffffff;
-  --color-light-grey: #f3f3f3;
-  --color-dark-grey: #353535;
-  --text-color: var(--color-primary);
-  --font-family-base: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
-  --ont-family-title: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
-  --font-size-small: 1.2rem;
-  --font-size-medium: 1.6rem;
-  --font-size-large: 1.8rem;
-  --font-size-x-large: 2.3rem;
-  --font-size-xx-large: 4.8rem;
-  --font-weight-regular: 400;
-  --font-weight-bold: 700;
-  --line-height-small: 1.2;
-  --line-height-base: 1.5;
-  --line-height-big: 1.8;
-  --section-header-align: center;
-  --section-tagline-transform: uppercase;
+    --color-primary: #D73953;                /* Primary color */
+    --color-black: #090909;                  /* Black color */
+    --color-white: #ffffff;                  /* White color */
+    --color-light-grey: #f3f3f3;             /* Light grey color */
+    --color-dark-grey: #353535;              /* Dark grey color */
+    --text-color: var(--color-black);        /* Text color */
+    --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Base font family */
+    --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Title font family */
+    --font-size-small: 1.2rem;               /* Small font size */
+    --font-size-medium: 1.6rem;              /* Medium font size */
+    --font-size-large: 1.8rem;               /* Large font size */
+    --font-size-x-large: 2.3rem;             /* Extra large font size */
+    --font-size-xx-large: 4.8rem;            /* Double extra large font size */
+    --font-weight-regular: 400;              /* Regular font weight */
+    --font-weight-bold: 700;                 /* Bold font weight */
+    --line-height-small: 1.2;                /* Small line height */
+    --line-height-base: 1.5;                 /* Base line height */
+    --line-height-big: 1.8;                  /* Big line height */
+    --section-header-align: center;          /* Section header alignment */
+    --section-tagline-transform: uppercase;   /* Section tagline transformation */
+}
+
+/* Enable smooth scrolling and adjust font size for the html */
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    font-size: 62.5%;        /* Set base font size */
+}
+
+/* Set body's font properties */
+body {
+    color: var(--text-color);                /* Use text color */
+    font-family: var(--font-family-base);    /* Use base font family */
+    font-size: var(--font-size-medium);      /* Use medium font size */
+    font-weight: var(--font-weight-regular); /* Use regular font weight */
+    line-height: var(--line-height-base);    /* Use base line height */
+}
+
+/* Style for links */
+a {
+    color: #161616;          /* Link color */
+    text-decoration: none;   /* Remove underline from links */
+}
+
+/* Hide visually hidden elements */
+.visually-hidden {
+    display: none; /* Hide elements */
+}
+
+/* Style for elements with the class card-category */
+.card-category {
+    color: var(--color-primary); /* Use primary color */
+}
+
+/* Align section-header */
+.section-header {
+    text-align: var(--section-header-align); /* Align text */
+}
+
+/* Style for section-tagline */
+.section-tagline {
+    color: var(--color-primary);               /* Use primary color */
+    font-family: var(--font-family-title);     /* Use title font family */
+    text-transform: var(--section-tagline-transform); /* Transform text */
+    font-weight: var(--font-weight-bold);      /* Use bold font weight */
+}
+
+/* Set font family and weight for all headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);     /* Use title font family */
+    font-weight: var(--font-weight-bold);       /* Use bold font weight */
 }
