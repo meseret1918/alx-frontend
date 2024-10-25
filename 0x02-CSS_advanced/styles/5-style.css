@@ -1,52 +1,54 @@
 /* Define custom properties for the root element */
 :root {
-    --color-primary: #d73953;
-    --color-black: #090909;
-    --color-white: #ffffff;
-    --color-light-grey: #f3f3f3;
-    --color-dark-grey: #353535;
-    --text-color: var(--color-black);
-    --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-    /* New font size custom properties */
-    --font-size-small: 1.2rem;
-    --font-size-medium: 1.6rem;
-    --font-size-large: 1.8rem;
-    --font-size-x-large: 2.3rem;
-    --font-size-xx-large: 4.8rem;
+    --color-primary: #D73953;          /* Primary color */
+    --color-black: #090909;            /* Black color */
+    --color-white: #ffffff;            /* White color */
+    --color-light-grey: #f3f3f3;       /* Light grey color */
+    --color-dark-grey: #353535;        /* Dark grey color */
+    --text-color: var(--color-black);  /* Text color */
+    --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Base font family */
+    --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Title font family */
+    --font-size-small: 1.2rem;         /* Small font size */
+    --font-size-medium: 1.6rem;        /* Medium font size */
+    --font-size-large: 1.8rem;         /* Large font size */
+    --font-size-x-large: 2.3rem;       /* Extra large font size */
+    --font-size-xx-large: 4.8rem;      /* Double extra large font size */
 }
 
-/* Set font-size for html to 62.5% */
+/* Set html to enable smooth scrolling and adjust font size */
 html {
-    font-size: 62.5%;
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    font-size: 62.5%; /* Set base font size */
 }
 
-/* Set font-size for body using font-size-medium */
+/* Set body's font-family to font-family-base and text color */
 body {
-    font-size: var(--font-size-medium);
-    color: var(--text-color);
-    font-family: var(--font-family-base);
+    color: var(--text-color); /* Use text color */
+    font-family: var(--font-family-base); /* Use base font family */
+    font-size: var(--font-size-medium); /* Use medium font size */
 }
 
-/* Set font-family for all 6 levels of section headings */
+/* Set font-family for all levels of section headings */
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-family-title);
+    font-family: var(--font-family-title); /* Use title font family */
 }
 
-/* Additional styles from 4-style.css */
+/* Reset color for all anchor elements to the text-color */
 a {
-    color: var(--text-color);
+    color: var(--text-color); /* Use text color */
 }
 
+/* Reset color for all elements with the class card-category to color-primary */
 .card-category {
-    color: var(--color-primary);
+    color: var(--color-primary); /* Use primary color */
 }
 
+/* Reset color for all elements with the class section-tagline to color-primary */
 .section-tagline {
-    color: var(--color-primary);
+    color: var(--color-primary); /* Use primary color */
 }
 
+/* Hide all elements with the class visually-hidden */
 .visually-hidden {
-    display: none;
+    display: none; /* Hide visually hidden elements */
 }
