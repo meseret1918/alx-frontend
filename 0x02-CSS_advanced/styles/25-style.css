@@ -49,5 +49,5 @@
 
 /* Dark theme adjustments for button */
 [data-section-theme="dark"] .button {
-    color: var(--color-white);
+    --button-color: var(--color-white); /* Custom property for dark theme */
 }
