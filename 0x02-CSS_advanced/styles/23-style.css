@@ -1,11 +1,14 @@
+/* Set the color for footer-address text using the text-color variable */
 .footer-address {
     color: var(--text-color);
 }
 
+/* Render social-link as a block element */
 .social-link {
     display: block;
 }
 
-.social-link svg {
+/* Set fill color of svg children within social-link to text-color */
+.social-link > svg {
     fill: var(--text-color);
 }
