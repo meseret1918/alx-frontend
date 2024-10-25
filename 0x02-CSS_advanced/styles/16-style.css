@@ -1,5 +1,7 @@
-/* Style the container */
+/* Styling for the container */
 .container {
-    width: 960px;
-    margin: 0 auto;
+    width: 960px;                   /* Set the container width */
+    margin-left: auto;              /* Center the container */
+    margin-right: auto;             /* Center the container */
+    /* Additional styles can be added here */
 }
