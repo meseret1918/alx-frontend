@@ -1,13 +1,16 @@
+/* Set margin for .card-title inside .card-services to none */
 .card-services .card-title {
     margin: 0;
 }
 
+/* Display anchor links inside .card-services as block-level elements and set padding */
 .card-services a {
     display: block;
-    padding: calc(2rem);
+    padding: 2rem;
     background-color: var(--color-light-grey);
 }
 
+/* Hover state for anchor links inside .card-services */
 .card-services a:hover {
     color: var(--color-white);
     background-color: var(--color-primary);
