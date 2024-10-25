@@ -7,17 +7,17 @@
     --header-logo-link-left: 0;
 }
 
-header {
-    padding: var(--header-padding);
+.header {
+    padding: var(--header-padding); /* Set padding for the header */
 }
 
 .header-logo {
-    position: var(--header-logo-position);
+    position: var(--header-logo-position); /* Set position for the logo */
 }
 
-.header-logo a {
-    display: var(--header-logo-link-display);
-    position: var(--header-logo-link-position);
-    top: var(--header-logo-link-top);
-    left: var(--header-logo-link-left);
+.header-logo-link {
+    display: var(--header-logo-link-display); /* Set display for the logo link */
+    position: var(--header-logo-link-position); /* Set position for the logo link */
+    top: var(--header-logo-link-top); /* Set top offset */
+    left: var(--header-logo-link-left); /* Set left offset */
 }
