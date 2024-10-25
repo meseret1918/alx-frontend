@@ -1,7 +1,33 @@
 :root {
-    /* Define custom properties */
+    /* Custom properties */
+    --header-padding: 4rem 0 0;
+    --header-logo-position: relative;
+    --header-logo-link-display: inline-block;
+    --header-logo-link-position: absolute;
+    --header-logo-link-top: -1rem;
+    --header-logo-link-left: 0;
+    
+    /* New custom properties for nav */
     --color-white: white; /* Define color-white */
     --color-primary: #007bff; /* Replace this with your desired primary color */
+}
+
+.header {
+    /* Header class selector */
+    padding: var(--header-padding); /* Apply custom padding */
+}
+
+.header-logo {
+    /* Header logo class selector */
+    position: var(--header-logo-position); /* Apply logo position */
+}
+
+.header-logo a {
+    /* Target link inside header-logo class */
+    display: var(--header-logo-link-display); /* Set display property */
+    position: var(--header-logo-link-position); /* Set position property */
+    top: var(--header-logo-link-top); /* Set vertical position */
+    left: var(--header-logo-link-left); /* Set horizontal position */
 }
 
 nav {
@@ -29,4 +55,9 @@ nav {
     /* Target before pseudo-elements of nav-link when nav-item is hovered and inside nav */
     background-color: var(--color-primary); /* Set background color to color-primary */
     width: 100%; /* Set width to 100% on hover */
+}
+
+/* Edit nav-item-link-hover property */
+.nav-item-link-hover {
+    color: var(--color-white); /* Set value to color-white variable */
 }
