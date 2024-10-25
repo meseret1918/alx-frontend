@@ -1,7 +1,7 @@
 :root {
-    /* Custom properties */
-    --nav-item-link-hover: color-white; /* Set the hover color for nav links */
-    --nav-item-link-hover-bg: color-primary; /* Set the background color for hover state */
+    /* Define custom properties */
+    --color-white: white; /* Define color-white */
+    --color-primary: #007bff; /* Replace this with your desired primary color */
 }
 
 nav {
@@ -14,19 +14,19 @@ nav {
 }
 
 .nav-link:before {
-    /* Target before state of nav-link inside nav */
+    /* Target before pseudo-elements of nav-link inside nav */
     content: ""; /* Set content to empty */
-    position: absolute; /* Position it absolutely */
-    bottom: 0; /* Set position to bottom */
-    left: 0; /* Set position to left */
-    background-color: var(--nav-item-link-hover); /* Set background color */
-    width: 0; /* Initial width */
-    height: 0.2rem; /* Set height */
-    transition: width 0.3s; /* Add transition for width */
+    position: absolute; /* Absolutely position the targeted elements */
+    top: 0; /* Set vertical position to 0 */
+    left: 0; /* Set horizontal position to 0 */
+    background-color: var(--color-white); /* Set background color to color-white */
+    width: 0; /* Set width to 0 */
+    height: 20%; /* Set height to 20% of the root element */
+    transition: width 0.3s; /* Add transition for smooth effect */
 }
 
 .nav-item:hover .nav-link:before {
-    /* Target before state of nav-link when nav-item is hovered */
-    background-color: var(--nav-item-link-hover-bg); /* Change background color on hover */
-    width: 100%; /* Expand width on hover */
+    /* Target before pseudo-elements of nav-link when nav-item is hovered and inside nav */
+    background-color: var(--color-primary); /* Set background color to color-primary */
+    width: 100%; /* Set width to 100% on hover */
 }
