@@ -1,19 +1,19 @@
-/* Remove text decoration from anchor elements */
-a {
-    text-decoration: none; /* Only targets hyperlinks */
+/* Selector for unvisited links */
+a:link {
+    color: inherit; /* Use inherited color or define a specific color */
 }
 
-/* Visited state */
+/* Selector for visited links */
 a:visited {
-    font-style: italic; /* Italicize text for visited links */
+    font-style: italic; /* Set font style to italic for visited links */
 }
 
-/* Hover state */
+/* Selector for hover state of the link */
 a:hover {
-    text-decoration: underline; /* Underline links on hover */
+    text-decoration: underline; /* Underline the text on hover */
 }
 
-/* Active state */
+/* Selector for active state of the link */
 a:active {
-    background-color: var(--color-light-grey); /* Set background color for active links */
+    background-color: var(--color-light-grey); /* Set background color on active state */
 }
