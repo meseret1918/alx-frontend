@@ -1,36 +1,15 @@
-/* Set margin for .card-title inside .card-services to none */
-.card-services .card-title {
-    margin: 0;
-}
-
-/* Display anchor links inside .card-services as block-level elements and set padding */
-.card-services a {
-    display: block;
-    padding: 2rem;
-    background-color: var(--color-light-grey);
-}
-
-/* Hover state for anchor links inside .card-services */
-.card-services a:hover {
-    color: var(--color-white);
-    background-color: var(--color-primary);
-    text-decoration: none;
-}
-
-/* Add custom properties */
 :root {
-    --button-display: inline-block;
-    --button-padding: 1.5rem 3rem;
-    --button-border: 0.2rem solid var(--color-primary);
-    --button-color: var(--color-black); /* Use var() for color */
-    --button-text-decoration: none;
-    --button-font-size: var(--font-size-large);
-    --button-hover-color: var(--color-white);
-    --button-hover-text-decoration: none;
-    --button-hover-background: var(--color-primary);
+    --button-display: inline-block; /* Example value */
+    --button-padding: 10px 20px; /* Example value */
+    --button-border: 2px solid transparent; /* Example value */
+    --button-font-size: 16px; /* Example value */
+    --button-color: #000; /* Example value */
+    --button-text-decoration: none; /* Example value */
+    --button-hover-color: #fff; /* Example value */
+    --button-hover-text-decoration: underline; /* Example value */
+    --button-hover-background: #007BFF; /* Example value */
 }
 
-/* Button class styles */
 .button {
     display: var(--button-display);
     padding: var(--button-padding);
@@ -40,14 +19,12 @@
     text-decoration: var(--button-text-decoration);
 }
 
-/* Hover state for buttons */
 .button:hover {
     color: var(--button-hover-color);
     text-decoration: var(--button-hover-text-decoration);
     background: var(--button-hover-background);
 }
 
-/* Dark theme adjustments for button */
-[data-section-theme="dark"] .button {
-    --button-color: var(--color-white); /* Custom property for dark theme */
+[data-section-theme="dark"] {
+    --button-color: #fff; /* White color for dark theme */
 }
