@@ -1,6 +1,8 @@
 :root {
     --section-tagline-margin: 0; /* New custom property */
-    --root-padding: 1rem; /* Define root padding if not defined */
+    --root-padding: 1rem; /* Define a root padding */
+    --font-size-small: 0.875rem; /* Example definition for small font size */
+    --text-color: #333; /* Example definition for text color */
 }
 
 .section-tagline {
