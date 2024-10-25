@@ -1,4 +1,15 @@
+/* Define custom properties for the root element */
 :root {
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
+    --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
+    /* Custom font-size properties */
     --font-size-small: 1.2rem;
     --font-size-medium: 1.6rem;
     --font-size-large: 1.8rem;
@@ -6,4 +17,39 @@
     --font-size-xx-large: 4.8rem;
 }
 
-/* html and body without font-size properties */
+/* Set html font size to 62.5% of normal size */
+html {
+    font-size: 62.5%;
+}
+
+/* Set body's font size to font-size-medium and apply base font-family */
+body {
+    color: var(--text-color);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-medium);
+}
+
+/* Set font-family for all 6 levels of section headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+}
+
+/* Reset the color for all anchor elements to the text-color */
+a {
+    color: var(--text-color);
+}
+
+/* Reset the color for all elements with the class card-category to color-primary */
+.card-category {
+    color: var(--color-primary);
+}
+
+/* Reset the color for all elements with the class section-tagline to color-primary */
+.section-tagline {
+    color: var(--color-primary);
+}
+
+/* Hide all elements with the class visually-hidden */
+.visually-hidden {
+    display: none;
+}
