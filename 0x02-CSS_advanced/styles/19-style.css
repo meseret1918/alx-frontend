@@ -1,38 +1,326 @@
 :root {
-    --section-tagline-margin: 0; /* New custom property */
-    --root-padding: 1rem; /* Define a root padding */
-    --font-size-small: 0.875rem; /* Example definition for small font size */
-    --text-color: #333; /* Example definition for text color */
-}
-
-.section-tagline {
-    margin: var(--section-tagline-margin); /* Use the custom property */
-}
-
-ul.row {
-    margin: 0; /* 0 margins all around */
-    padding: 0; /* No padding all around */
-    list-style: none; /* No default styles */
-}
-
-.col-1-3 {
-    width: 33.33%; /* Set width to 33.33% of its parent */
-    float: left; /* Float to the left */
-    padding: calc(var(--root-padding) / 2); /* Set padding to half of the root element */
-}
-
-.col-1-2 {
-    width: 50%; /* Set width to 50% of the parent */
-    float: left; /* Float to the left */
-    padding: calc(var(--root-padding) / 2); /* Set padding to half of the root element */
-}
-
-.footer-copyright {
+    --color-primary: #D73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-primary);
+    --font-family-base: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    --font-family-title: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif; /* Fixed typo: 'ont-family-title' to 'font-family-title' */
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 4.8rem;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    --line-height-small: 1.2;
+    --line-height-base: 1.5;
+    --line-height-big: 1.8;
+    --section-header-align: center;
+    --section-tagline-transform: uppercase;
+    --section-title-margin: 0;
+    --section-title-color: var(--color-black);
+    --section-padding: 5rem 0;
+    --section-header-padding: 0 0 3rem;
+    --section-body-padding: 0 0 3rem;
+    --section-footer-padding: 3rem 0 0;
+    --section-footer-align: center;
+    --footer-padding: 5rem 0 1rem;
+    --nav-item-font-family: var(--font-family-title);
+    --nav-item-font-weight: var(--font-weight-bold);
+    --nav-item-font-size: var(--font-size-medium);
+    --nav-item-letter-spacing: 0.04rem;
+    --nav-item-display: inline-block;
+    --nav-item-margin: 0 0 3rem 0;
+    --nav-item-link-hover: var(--color-primary);
+    --section-tagline-margin: 0; /* Custom property for section tagline margin */
+  }
+  
+  html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    font-size: 62.5%; /* Set base font size for rem calculations */
+  }
+  
+  body {
+    margin: 0;
+    color: var(--text-color);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
+  }
+  
+  main {
+    display: block;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+  
+  hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+  }
+  
+  pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  a {
+    background-color: transparent;
+    color: #161616; /* Default link color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  a:link {
+    color: var(--text-color); /* Link color */
+  }
+  
+  a:visited {
+    font-style: italic; /* Style for visited links */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  a:active {
+    background-color: var(--color-light-grey); /* Background on active */
+  }
+  
+  .navbar-menu {
+    float: right;
+  }
+  
+  .nav {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* No bullet points */
+    text-align: center;
+  }
+  
+  .nav .nav-item {
+    font-family: var(--nav-item-font-family);
+    font-weight: var(--nav-item-font-weight);
+    font-size: var(--nav-item-font-size);
+    letter-spacing: var(--nav-item-letter-spacing);
+    display: var(--nav-item-display);
+    margin: var(--nav-item-margin);
+  }
+  
+  .nav .nav-link {
+    display: block;
+    padding: 0.5rem 1rem; /* Padding for nav links */
+  }
+  
+  .nav .nav-link:hover {
+    color: var(--nav-item-link-hover); /* Change color on hover */
+  }
+  
+  .visually-hidden {
+    display: none; /* Hide elements visually */
+  }
+  
+  .card-category {
+    color: var(--color-primary); /* Category color */
+  }
+  
+  .section {
+    padding: var(--section-padding); /* Section padding */
+  }
+  
+  .section-header {
+    padding: var(--section-header-padding); /* Section header padding */
+  }
+  
+  .section-body {
+    padding: var(--section-body-padding); /* Section body padding */
+  }
+  
+  .section-footer {
+    text-align: var(--section-footer-align); /* Footer alignment */
+    padding: var(--section-footer-padding); /* Footer padding */
+  }
+  
+  .section-title {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-xx-large);
+    font-weight: var(--font-weight-bold);
+    margin: var(--section-title-margin); /* Section title margin */
+    color: var(--section-title-color); /* Section title color */
+  }
+  
+  .section-tagline {
+    color: var(--color-primary); /* Tagline color */
+    font-family: var(--font-family-title);
+    text-transform: var(--section-tagline-transform);
+    font-weight: var(--font-weight-bold);
+    margin: var(--section-tagline-margin); /* Tagline margin */
+  }
+  
+  .container {
+    width: 960px; /* Container width */
+    margin-left: auto;
+    margin-right: auto; /* Center the container */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title); /* Heading font */
+    font-weight: var(--font-weight-bold);
+  }
+  
+  .footer {
+    padding: var(--footer-padding); /* Footer padding */
+  }
+  
+  ul.row {
     margin: 0; /* No margins */
-    font-size: var(--font-size-small); /* Set font size to small */
-    color: var(--text-color); /* Set foreground color */
-}
-
-.footer ul {
-    text-align: right; /* Align text to the right */
-}
+    padding: 0; /* No padding */
+    list-style: none; /* No default styles */
+  }
+  
+  .col-1-3 {
+    width: 33.33%; /* Set width */
+    float: left; /* Float to left */
+    padding: 0.5rem; /* Adjust padding */
+  }
+  
+  .col-1-2 {
+    width: 50%; /* Set width */
+    float: left; /* Float to left */
+    padding: 0.5rem; /* Adjust padding */
+  }
+  
+  .footer-copyright {
+    margin: 0; /* No margins */
+    font-size: var(--font-size-small); /* Small font size */
+    color: var(--text-color); /* Text color */
+  }
+  
+  .footer ul {
+    text-align: right; /* Align text to right */
+  }
+  
+  /* Additional Resets */
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit; /* Inherit font family */
+    font-size: 100%; /* Font size */
+    line-height: 1.15; /* Line height */
+    margin: 0; /* No margins */
+  }
+  
+  button,
+  input {
+    overflow: visible; /* Visible overflow */
+  }
+  
+  button,
+  select {
+    text-transform: none; /* No text transform */
+  }
+  
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: button; /* Button appearance */
+  }
+  
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none; /* No inner border */
+    padding: 0; /* No padding */
+  }
+  
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText; /* Focus outline */
+  }
+  
+  /* Correct the padding in Firefox */
+  fieldset {
+    padding: 0.35em 0.75em 0.625em; /* Fieldset padding */
+  }
+  
+  legend {
+    box-sizing: border-box; /* Box model */
+    color: inherit; /* Inherit color */
+    display: table; /* Display as table */
+    max-width: 100%; /* Max width */
+    padding: 0; /* No padding */
+    white-space: normal; /* Normal white space */
+  }
+  
+  progress {
+    vertical-align: baseline; /* Vertical alignment */
+  }
+  
+  textarea {
+    overflow: auto; /* Overflow */
+  }
+  
+  [type="checkbox"],
+  [type="radio"] {
+    box-sizing: border-box; /* Box model */
+    padding: 0; /* No padding */
+  }
+  
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto; /* Auto height */
+  }
+  
+  [type="search"] {
+    -webkit-appearance: textfield; /* Textfield appearance */
+    outline-offset: -2px; /* Outline offset */
+  }
+  
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none; /* No search decoration */
+  }
+  
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button; /* Button appearance */
+    font: inherit; /* Inherit font */
+  }
+  
+  /* Display settings */
+  details {
+    display: block; /* Display block */
+  }
+  
+  summary {
+    display: list-item; /* List item */
+  }
+  
+  template {
+    display: none; /* Hide template */
+  }
+  
+  /* Hidden elements */
+  [hidden] {
+    display: none; /* Hide hidden elements */
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box; /* Box model */
+  }
+  
+  
