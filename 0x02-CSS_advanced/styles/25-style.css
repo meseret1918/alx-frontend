@@ -1,13 +1,13 @@
 :root {
-    --button-display: inline-block; /* Example value */
-    --button-padding: 10px 20px; /* Example value */
-    --button-border: 2px solid transparent; /* Example value */
-    --button-font-size: 16px; /* Example value */
-    --button-color: #000; /* Example value */
-    --button-text-decoration: none; /* Example value */
-    --button-hover-color: #fff; /* Example value */
-    --button-hover-text-decoration: underline; /* Example value */
-    --button-hover-background: #007BFF; /* Example value */
+    --button-display: inline-block;
+    --button-padding: 1.5rem 3rem;
+    --button-border: 0.2rem solid var(--color-primary);
+    --button-font-size: var(--font-size-large);
+    --button-color: var(--color-black);
+    --button-text-decoration: none;
+    --button-hover-color: var(--color-white);
+    --button-hover-text-decoration: none;
+    --button-hover-background: var(--color-primary);
 }
 
 .button {
@@ -26,5 +26,8 @@
 }
 
 [data-section-theme="dark"] {
-    --button-color: #fff; /* White color for dark theme */
+    --color-white: #ffffff; /* White color for dark theme */
+    --color-primary: #007bff; /* Primary color */
+    --color-black: #000000; /* Black color */
+    --button-color: var(--color-white); /* Button color for dark theme */
 }
