@@ -1,64 +1,50 @@
 /* 
- * CSS for Navbar Menu
- * This stylesheet customizes the navbar menu styles for better layout and presentation.
- */
+styles/18-style.css 
+This file contains styles for the navbar, including custom properties and layout adjustments.
+*/
 
- :root {
-    --color-primary: #D73953;
-    --color-black: #090909;
-    --color-white: #ffffff;
-    --color-light-grey: #f3f3f3;
-    --color-dark-grey: #353535;
-    --text-color: var(--color-primary);
-    --font-family-base: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
-    --font-family-title: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
-    --font-size-small: 1.2rem;
-    --font-size-medium: 1.6rem;
-    --font-size-large: 1.8rem;
-    --font-size-x-large: 2.3rem;
-    --font-size-xx-large: 4.8rem;
-    --font-weight-regular: 400;
-    --font-weight-bold: 700;
-    --line-height-small: 1.2;
-    --line-height-base: 1.5;
-    --line-height-big: 1.8;
-  
-    /* Custom properties for navbar */
-    --nav-item-font-family: var(--font-family-title);
-    --nav-item-font-weight: var(--font-weight-bold);
-    --nav-item-font-size: var(--font-size-medium);
-    --nav-item-letter-spacing: 0.04rem; /* 4% of the root element */
+/* Custom Properties */
+:root {
+    --font-family-title: 'Arial', sans-serif; /* Replace with your desired font */
+    --font-weight-bold: bold;
+    --font-size-medium: 16px; /* Replace with your desired font size */
+    --nav-item-letter-spacing: 0.04em; /* 4% of the root element */
     --nav-item-display: inline-block;
-    --nav-item-margin: 3rem 0 3rem; /* 3 times the root element on bottom */
-    --nav-item-link-hover: var(--color-primary);
-  }
-  
-  .navbar-menu {
-    float: right; /* Float the navbar to the right */
-  }
-  
-  .nav {
+    --nav-item-margin: 0 0 3rem 0; /* 3 times the root element on the bottom */
+    --color-primary: #3498db; /* Replace with your desired color */
+    --nav-item-link-hover: #2980b9; /* Replace with your desired hover color */
+}
+
+/* Targeting navbar-menu class */
+.navbar-menu {
+    float: right;
+}
+
+/* Styles for nav class */
+.nav {
     margin: 0; /* Set margin to 0 */
     padding: 0; /* Set padding to 0 */
+    text-align: center; /* Center align text */
     list-style: none; /* No list style */
-    text-align: center; /* Center align the text */
-  }
-  
-  .nav .nav-item {
-    font-family: var(--nav-item-font-family); /* Font family */
-    font-weight: var(--nav-item-font-weight); /* Font weight */
-    font-size: var(--nav-item-font-size); /* Font size */
+}
+
+/* Styles for nav-item class */
+.nav .nav-item {
+    font-family: var(--font-family-title); /* Font family */
+    font-weight: var(--font-weight-bold); /* Font weight */
+    font-size: var(--font-size-medium); /* Font size */
     letter-spacing: var(--nav-item-letter-spacing); /* Letter spacing */
-    display: var(--nav-item-display); /* Display style */
+    display: var(--nav-item-display); /* Display */
     margin: var(--nav-item-margin); /* Margin */
-  }
-  
-  .nav .nav-link {
+}
+
+/* Styles for nav-link class */
+.nav .nav-link {
     display: block; /* Block display */
-    padding: 0.5rem 1rem; /* Padding: half for top/bottom, equal for left/right */
-  }
-  
-  .nav .nav-link:hover {
-    color: var(--nav-item-link-hover); /* Change foreground color on hover */
-  }
-  
+    padding: calc(0.5rem) calc(1rem); /* Top & Bottom half of root, Left & Right equal to root */
+}
+
+/* Hover effect for nav-link class */
+.nav .nav-link:hover {
+    color: var(--nav-item-link-hover); /* Foreground color on hover */
+}
