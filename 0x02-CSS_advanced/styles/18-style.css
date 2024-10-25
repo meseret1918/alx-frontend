@@ -1,41 +1,44 @@
-:root {
-    --nav-item-font-family: var(--font-family-title);
-    --nav-item-font-weight: var(--font-weight-bold);
-    --nav-item-font-size: var(--font-size-medium);
-    --nav-item-letter-spacing: 4%;
-    --nav-item-display: inline-block;
-    --nav-item-margin: 0 0 3rem 0;
-    --nav-item-link-hover: var(--color-primary);
+/* Navbar styles */
+nav {
+    margin: 0;                      /* Set margins to 0 */
+    padding: 0;                     /* Set padding to 0 */
+    text-align: center;             /* Center text alignment */
 }
 
 .navbar-menu {
-    float: right;
+    float: right;                   /* Float menu to the right */
 }
 
-nav {
-    margin: 0;
-    padding: 0;
-    text-align: center;
+.nav {
+    list-style: none;               /* Remove list style */
 }
 
-nav ul {
-    list-style: none;
+.nav-item {
+    font-family: var(--font-family-title);  /* Set font family */
+    font-weight: var(--font-weight-bold);    /* Set font weight */
+    font-size: var(--font-size-medium);      /* Set font size */
+    letter-spacing: 0.4rem;            /* Set letter spacing */
+    display: inline-block;             /* Set display to inline-block */
+    margin: 0 0 3rem 0;               /* Set bottom margin and 0 for others */
 }
 
-nav-item {
-    font-family: var(--nav-item-font-family);
-    font-weight: var(--nav-item-font-weight);
-    font-size: var(--nav-item-font-size);
-    letter-spacing: var(--nav-item-letter-spacing);
-    display: var(--nav-item-display);
-    margin: var(--nav-item-margin);
+.nav-link {
+    display: block;                   /* Set display to block */
+    padding: calc(0.5 * var(--font-size-medium)) 0;  /* Set padding */
 }
 
-nav-link {
-    display: block;
-    padding: calc(0.5rem) calc(1rem);
+/* Hover state for nav-link */
+.nav-link:hover {
+    color: var(--color-primary);      /* Set hover color */
 }
 
-nav-link:hover {
-    color: var(--nav-item-link-hover);
+/* Responsive design */
+@media (max-width: 768px) {
+    nav {
+        text-align: left;             /* Align text to left on smaller screens */
+    }
+
+    .navbar-menu {
+        float: none;                  /* Reset float on smaller screens */
+    }
 }
