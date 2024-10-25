@@ -1,76 +1,294 @@
-/* 
-styles/18-style.css 
-This file contains styles for the navbar, including custom properties and layout adjustments.
-*/
-
-/* Custom Properties */
 :root {
-    --navbar-padding: 1rem 0; /* Adjust as needed for navbar */
-    --navbar-menu-margin: 0; /* Margin for navbar menu */
-    --navbar-item-margin: 0 0 3rem; /* Margin for nav items */
-    --navbar-item-font-family: 'Arial', sans-serif; /* Font family for nav items */
-    --navbar-item-font-weight: bold; /* Font weight for nav items */
-    --navbar-item-font-size: 16px; /* Font size for nav items */
-    --navbar-item-letter-spacing: 0.04em; /* Letter spacing for nav items */
-    --navbar-item-display: inline-block; /* Display for nav items */
-    --navbar-link-padding: calc(0.5rem) calc(1rem); /* Padding for nav links */
-    --navbar-link-hover-color: #2980b9; /* Color on hover */
-}
-
-/* Targeting navbar-menu class */
-.navbar-menu {
-    float: right; /* Float navbar menu to the right */
-    margin: var(--navbar-menu-margin); /* Apply menu margin */
-    padding: var(--navbar-padding); /* Apply padding */
-}
-
-/* Styles for nav class */
-.nav {
-    margin: 0; /* Set margin to 0 */
-    padding: 0; /* Set padding to 0 */
-    text-align: center; /* Center align text */
-    list-style: none; /* No list style */
-}
-
-/* Styles for nav-item class */
-.nav .nav-item {
-    font-family: var(--navbar-item-font-family); /* Font family */
-    font-weight: var(--navbar-item-font-weight); /* Font weight */
-    font-size: var(--navbar-item-font-size); /* Font size */
-    letter-spacing: var(--navbar-item-letter-spacing); /* Letter spacing */
-    display: var(--navbar-item-display); /* Display */
-    margin: var(--navbar-item-margin); /* Margin */
-}
-
-/* Styles for nav-link class */
-.nav .nav-link {
-    display: block; /* Block display */
-    padding: var(--navbar-link-padding); /* Apply link padding */
-}
-
-/* Hover effect for nav-link class */
-.nav .nav-link:hover {
-    color: var(--navbar-link-hover-color); /* Foreground color on hover */
-}
-
-/* Section Styles (Optional: Include if needed for sections) */
-.section {
+    --color-primary: #D73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-primary);
+    --font-family-base: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    --font-family-title: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 4.8rem;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    --line-height-small: 1.2;
+    --line-height-base: 1.5;
+    --line-height-big: 1.8;
+  
+    --section-padding: 5rem 0;
+    --section-header-padding: 0 0 3rem;
+    --section-body-padding: 0 0 3rem;
+    --section-footer-padding: 3rem 0 0;
+    --section-footer-align: center;
+    --footer-padding: 5rem 0 1rem;
+  
+    --nav-item-font-family: var(--font-family-title);
+    --nav-item-font-weight: var(--font-weight-bold);
+    --nav-item-font-size: var(--font-size-medium);
+    --nav-item-letter-spacing: 0.04rem;
+    --nav-item-display: inline-block;
+    --nav-item-margin: 0 0 3rem 0;
+    --nav-item-link-hover: var(--color-primary);
+  }
+  
+  html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    text-size-adjust: 100%; /* Support for Chrome 54+, Chrome Android 54+, Edge 79+, Samsung Internet 6.0+ */
+    scroll-behavior: smooth;
+    font-size: 62.5%; /* Base font size */
+  }
+  
+  body {
+    margin: 0;
+    color: var(--text-color);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
+  }
+  
+  main {
+    display: block;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+  
+  hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+  }
+  
+  pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  a {
+    background-color: transparent;
+    color: #161616; /* Default link color */
+    text-decoration: none; /* Default text decoration */
+  }
+  
+  a:link {
+    color: var(--text-color);
+  }
+  
+  a:visited {
+    font-style: italic; /* Style for visited links */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Hover effect */
+  }
+  
+  a:active {
+    background-color: var(--color-light-grey);
+  }
+  
+  .navbar-menu {
+    float: right;
+  }
+  
+  .nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+  
+  .nav .nav-item {
+    font-family: var(--nav-item-font-family);
+    font-weight: var(--nav-item-font-weight);
+    font-size: var(--nav-item-font-size);
+    letter-spacing: var(--nav-item-letter-spacing);
+    display: var(--nav-item-display);
+    margin: var(--nav-item-margin);
+  }
+  
+  .nav .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav .nav-link:hover {
+    color: var(--nav-item-link-hover);
+  }
+  
+  .visually-hidden {
+    display: none; /* Hidden elements for accessibility */
+  }
+  
+  .card-category {
+    color: var(--color-primary);
+  }
+  
+  .section {
     padding: var(--section-padding);
-}
-
-.section-header {
+  }
+  
+  .section-header {
     padding: var(--section-header-padding);
-}
-
-.section-body {
+  }
+  
+  .section-body {
     padding: var(--section-body-padding);
-}
-
-.section-footer {
+  }
+  
+  .section-footer {
     padding: var(--section-footer-padding);
     text-align: var(--section-footer-align);
-}
-
-.footer {
+  }
+  
+  .section-title {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-xx-large);
+    font-weight: var(--font-weight-bold);
+    margin: var(--section-title-margin);
+    color: var(--section-title-color);
+  }
+  
+  .section-tagline {
+    color: var(--color-primary);
+    font-family: var(--font-family-title);
+    text-transform: var(--section-tagline-transform);
+    font-weight: var(--font-weight-bold);
+  }
+  
+  .container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold);
+  }
+  
+  .footer {
     padding: var(--footer-padding);
-}
+  }
+  
+  img {
+    border-style: none; /* No border on images */
+  }
+  
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit; /* Inherit font */
+    font-size: 100%; /* Base font size */
+    line-height: 1.15; /* Consistent line height */
+    margin: 0; /* Reset margin */
+  }
+  
+  button,
+  input {
+    overflow: visible; /* Overflow handling */
+  }
+  
+  button,
+  select {
+    text-transform: none; /* No text transformation */
+  }
+  
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: button; /* Default button style */
+  }
+  
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0; /* Reset padding */
+  }
+  
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText; /* Focus outline for buttons */
+  }
+  
+  fieldset {
+    padding: 0.35em 0.75em 0.625em; /* Fieldset padding */
+  }
+  
+  legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+  }
+  
+  progress {
+    vertical-align: baseline; /* Align progress element */
+  }
+  
+  textarea {
+    overflow: auto; /* Scrollable textarea */
+  }
+  
+  [type="checkbox"],
+  [type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+  }
+  
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto; /* Reset spin button height */
+  }
+  
+  [type="search"] {
+    -webkit-appearance: textfield; /* Search field style */
+    outline-offset: -2px; /* Outline offset */
+  }
+  
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none; /* No decoration */
+  }
+  
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button; /* File upload button style */
+    font: inherit; /* Inherit font */
+  }
+  
+  details {
+    display: block; /* Block display for details */
+  }
+  
+  summary {
+    display: list-item; /* List item display for summary */
+  }
+  
+  template {
+    display: none; /* Hide templates */
+  }
+  
+  [hidden] {
+    display: none; /* Hide elements */
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box; /* Universal box-sizing */
+  }
+  
