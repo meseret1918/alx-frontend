@@ -1,11 +1,5 @@
 :root {
-    --section-header-align: center;
     --section-tagline-transform: uppercase; /* Custom property for text transformation */
-}
-
-/* Align section-header */
-.section-header {
-    text-align: var(--section-header-align);
 }
 
 /* Style for section-tagline */
