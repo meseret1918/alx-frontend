@@ -3,7 +3,7 @@
     position: relative; /* Allows positioning of pseudo-elements */
   }
   
-  .row:after {
+  .row::after { /* Use double colons */
     content: ""; /* No content */
     display: table; /* Displayed as a table */
     clear: both; /* Prevent floating elements on either side */
