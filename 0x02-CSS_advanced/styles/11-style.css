@@ -10,7 +10,13 @@
 
 /* Targeting the section-tagline class */
 .section-tagline {
-    font-family: var(--font-family-title); /* Ensure this variable is defined elsewhere */
-    text-transform: var(--section-tagline-transform); /* Using the custom property for text transformation */
-    font-weight: var(--font-weight-bold); /* Ensure this variable is defined elsewhere */
+    font-family: var(--font-family-title); /* Set font-family */
+}
+
+.section-tagline {
+    text-transform: var(--section-tagline-transform); /* Set text-transform */
+}
+
+.section-tagline {
+    font-weight: var(--font-weight-bold); /* Set font-weight */
 }
