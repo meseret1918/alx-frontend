@@ -1,14 +1,58 @@
+/* Define custom properties for font sizes, colors, and font weights */
 :root {
-    --font-weight-regular: 400; /* Custom property for regular font weight */
-    --font-weight-bold: 700; /* Custom property for bold font weight */
+    /* Font size custom properties */
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 4.8rem;
+
+    /* Color properties */
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
+
+    /* Font family properties */
+    --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    /* Font weight properties */
+    --font-weight-regular: 400;  /* Regular font weight */
+    --font-weight-bold: 700;     /* Bold font weight */
 }
 
-/* Set body font weight to font-weight-regular */
+/* Set font size for the html element */
+html {
+    font-size: 62.5%; /* Adjust base size for rem units */
+}
+
+/* Set body font size, font family, and regular font weight */
 body {
-    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-medium);
+    color: var(--text-color);
+    font-family: var(--font-family-base);
+    font-weight: var(--font-weight-regular); /* Regular font weight */
 }
 
-/* Set headings font weight to font-weight-bold */
+/* Set font-family and bold font weight for all heading levels */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold); /* Bold font weight */
+}
+
+/* Set color properties for specific elements */
+a {
+    color: var(--text-color);
+}
+
+.card-category, .section-tagline {
+    color: var(--color-primary);
+}
+
+/* Hide visually hidden elements */
+.visually-hidden {
+    display: none;
 }
