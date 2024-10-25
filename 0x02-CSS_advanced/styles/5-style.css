@@ -1,4 +1,5 @@
-/* Define custom properties for the root element */
+/* CSS file for setting up basic styling, custom properties, and font configurations */
+
 :root {
     --color-primary: #d73953;
     --color-black: #090909;
@@ -8,7 +9,7 @@
     --text-color: var(--color-black);
     --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    
+
     /* Custom font-size properties */
     --font-size-small: 1.2rem;
     --font-size-medium: 1.6rem;
@@ -17,42 +18,30 @@
     --font-size-xx-large: 4.8rem;
 }
 
-/* Set html font size to 62.5% of normal size */
 html {
-    font-size: 62.5%; /* Adjust base size to use rem units effectively */
-    /* Ensure there's no other style that exceeds the expected result */
+    font-size: 62.5%; /* Base size for rem units */
 }
 
-/* Set body's font size to font-size-medium and apply base font-family */
 body {
-    font-family: var(--font-family-base); /* Apply base font-family */
-    font-size: var(--font-size-medium);   /* Correct medium size */
-    color: var(--text-color);             /* Ensure text color is black */
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-medium);
+    color: var(--text-color);
 }
 
-/* Set font-family for all 6 levels of section headings */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-title);
-    /* Use common font styling here without additional properties */
 }
 
-/* Reset the color for all anchor elements to the text-color */
 a {
-    color: var(--text-color); /* Set anchor elements to base text color */
-    /* No additional styling needed here */
+    color: var(--text-color);
 }
 
-/* Reset the color for all elements with the class card-category to color-primary */
-.card-category {
-    color: var(--color-primary); /* Primary color for .card-category */
+.card-category, .section-tagline {
+    color: var(--color-primary);
 }
 
-/* Reset the color for all elements with the class section-tagline to color-primary */
-.section-tagline {
-    color: var(--color-primary); /* Primary color for .section-tagline */
-}
-
-/* Hide all elements with the class visually-hidden */
 .visually-hidden {
     display: none;
 }
+
+/* EOF */

@@ -1,19 +1,21 @@
-# Techium
+# CSS Advanced Project
 
-Techium is a web project designed to showcase various services and works. It aims to help users build their brands through digital solutions.
+This project demonstrates advanced CSS techniques, including custom properties, responsive font sizing, and targeted element styling for Chrome 78.x.
 
-## Features
-- Home Page
-- Services Overview
-- Portfolio Showcase
-- About Us Section
-- Latest News and Testimonials
+## Project Structure
 
-## Setup Instructions
-1. Clone the repository.
-2. Open `index.html` in your web browser.
-3. Ensure your browser is updated to Chrome version 78.x for the best compatibility.
+- **styles/5-style.css**: CSS file containing custom properties and font styling.
+- **index.html**: HTML file to display the styled elements.
 
-## W3C Compliance
-The code adheres to W3C standards and has been validated with the W3C-Validator.
+## How to Run
 
+1. Open `index.html` in Chrome version 78.x to see the styling in action.
+2. Styles are applied using custom properties to provide responsive design flexibility.
+
+## Validation
+
+All code is W3C compliant. Validate HTML and CSS using the [W3C Validator](https://validator.w3.org/).
+
+## Author
+
+Project by meseret1918.
