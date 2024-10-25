@@ -1,12 +1,12 @@
-/* Selector for all classes that start with col- */
+/* Apply to all classes that start with col- */
 [class^="col-"] {
-    float: left; /* Float to the left for all col- classes */
-    padding: 0.5rem; /* Set padding to half of the root element */
+    float: left;          /* Float to the left */
+    padding: 0.5rem;     /* Set padding to half of the root element */
   }
   
-  /* Ensure specific col- classes do not have conflicting styles */
+  /* Remove float and padding properties from specific classes */
   .col-1-2, .col-1-3 {
-    float: none; /* Remove float properties from these specific classes */
-    padding: 0; /* Remove padding from these specific classes */
+    float: none; /* Remove float property */
+    padding: 0;  /* Remove padding property */
   }
   
