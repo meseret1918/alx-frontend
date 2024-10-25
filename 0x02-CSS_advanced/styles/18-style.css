@@ -1,16 +1,27 @@
 :root {
     --root-font-size: 16px; /* Example root font size */
-    --nav-item-font-family: 'Arial', sans-serif; /* Example font family */
-    --nav-item-font-weight: bold; /* Example font weight */
-    --nav-item-font-size: 1rem; /* Example font size */
-    --nav-item-letter-spacing: 0.4em; /* Adjusted letter spacing */
-    --nav-item-display: inline-block; /* Display style for nav items */
-    --nav-item-margin: 0 0 3 * var(--root-font-size) 0; /* Margin settings */
-    --nav-item-link-hover: blue; /* Example hover color */
+    --font-family-title: 'Arial', sans-serif; /* Example font family for titles */
+    --font-weight-bold: bold; /* Example bold weight */
+    --font-size-medium: 1rem; /* Example medium font size */
     --color-primary: #007bff; /* Primary color example */
 }
 
+/* Custom properties for nav item styles */
+:root {
+    --nav-item-font-family: var(--font-family-title); /* Set font family */
+    --nav-item-font-weight: var(--font-weight-bold); /* Set font weight */
+    --nav-item-font-size: var(--font-size-medium); /* Set font size */
+    --nav-item-letter-spacing: 0.04 * var(--root-font-size); /* Set letter spacing */
+    --nav-item-display: inline-block; /* Set display */
+    --nav-item-margin: 0 0 calc(3 * var(--root-font-size)) 0; /* Set margin */
+    --nav-item-link-hover: var(--color-primary); /* Set hover color */
+}
+
 /* Navbar styles */
+.navbar-menu {
+    float: right; /* Float navbar menu to the right */
+}
+
 .nav {
     margin: 0; /* Set margins to 0 */
     padding: 0; /* Set padding to 0 */
@@ -29,8 +40,7 @@
 
 .nav-link {
     display: block; /* Set display to block */
-    padding: calc(0.5 * var(--root-font-size)) 0; /* Padding top and bottom */
-    color: var(--color-primary); /* Set default link color */
+    padding: calc(0.5 * var(--root-font-size)) var(--root-font-size); /* Padding settings */
     text-decoration: none; /* Remove underline from links */
 }
 
