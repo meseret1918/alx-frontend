@@ -1,6 +1,14 @@
-/* CSS file for setting up basic styling, custom properties, and font configurations */
+/* Define custom properties for font sizes and colors */
 
 :root {
+    /* Font size custom properties */
+    --font-size-small: 1.2rem;       /* Custom property for small font size */
+    --font-size-medium: 1.6rem;      /* Custom property for medium font size */
+    --font-size-large: 1.8rem;       /* Custom property for large font size */
+    --font-size-x-large: 2.3rem;     /* Custom property for extra-large font size */
+    --font-size-xx-large: 4.8rem;    /* Custom property for double extra-large font size */
+
+    /* Color and font properties (from styles/4-style.css) */
     --color-primary: #d73953;
     --color-black: #090909;
     --color-white: #ffffff;
@@ -9,39 +17,39 @@
     --text-color: var(--color-black);
     --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-    /* Custom font-size properties */
-    --font-size-small: 1.2rem;
-    --font-size-medium: 1.6rem;
-    --font-size-large: 1.8rem;
-    --font-size-x-large: 2.3rem;
-    --font-size-xx-large: 4.8rem;
 }
 
+/* Set font size for html element to 62.5% of its normal size */
 html {
-    font-size: 62.5%; /* Base size for rem units */
+    font-size: 62.5%; /* Adjusts base font size for rem units */
 }
 
+/* Set the body font size to the custom medium size and apply font-family */
 body {
-    font-family: var(--font-family-base);
     font-size: var(--font-size-medium);
     color: var(--text-color);
+    font-family: var(--font-family-base);
 }
 
+/* Set font-family for all heading levels */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-title);
 }
 
+/* Set color properties for specific elements */
 a {
     color: var(--text-color);
 }
 
-.card-category, .section-tagline {
+.card-category {
     color: var(--color-primary);
 }
 
+.section-tagline {
+    color: var(--color-primary);
+}
+
+/* Hide visually hidden elements */
 .visually-hidden {
     display: none;
 }
-
-/* EOF */
