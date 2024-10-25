@@ -1,15 +1,15 @@
 .card-testimonial {
-    text-align: center;
+    text-align: center; /* Assuming you have this style already */
 }
 
 .card-testimonial .card-avatar {
-    border-radius: 50%;
-    width: calc(10 * var(--root-element));
-    height: calc(10 * var(--root-element));
+    border-radius: 50%; /* Circular avatar */
+    width: 10rem;       /* Width for the avatar */
+    height: 10rem;      /* Height for the avatar */
 }
 
-.card-quote cite {
-    display: block;
-    padding-top: var(--root-element);
-    color: var(--color-primary);
+.card-testimonial .card-quote cite {
+    display: block;                   /* Change display to block */
+    padding-top: 1rem;               /* Add padding on top */
+    color: var(--color-primary);      /* Set text color */
 }
