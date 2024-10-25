@@ -1,64 +1,31 @@
-/* Base column styles */
+/* General styles for all col- classes */
 [class^="col-"] {
-    float: left; /* Float left for all col- classes */
-    padding: calc(var(--padding-base) / 2); /* Set padding to half of the root element */
+    float: left; /* Apply float left to all col- classes */
+    padding: calc(var(--root-padding) / 2); /* Set padding to half of the root element's padding */
 }
 
-/* Specific column widths */
+/* Specific column widths (ensure these classes exist) */
 .col-1 {
-    width: 8.33%; /* Width for column 1 */
+    width: 8.33%; /* Width for 1 column */
 }
 
 .col-2 {
-    width: 16.66%; /* Width for column 2 */
+    width: 16.66%; /* Width for 2 columns */
 }
 
-/* Clear floats */
+.col-3 {
+    width: 25%; /* Width for 3 columns */
+}
+
+/* Remove float and padding from specific classes */
+.col-1-2, .col-1-3 {
+    float: none; /* Remove float */
+    padding: 0; /* Remove padding */
+}
+
+/* Clearfix for floated elements */
 .clearfix::after {
-    content: ""; /* Clearfix */
-    display: table; /* Table display */
-    clear: both; /* Clear floats */
-}
-
-/* Miscellaneous */
-.text-center {
-    text-align: center; /* Center alignment */
-}
-
-.text-right {
-    text-align: right; /* Right alignment */
-}
-
-.text-left {
-    text-align: left; /* Left alignment */
-}
-
-/* Util Classes */
-.hidden {
-    display: none; /* Hidden */
-}
-
-.visible {
-    display: block; /* Visible */
-}
-
-/* Error Messages */
-.error-message {
-    color: var(--color-error); /* Error color */
-    background-color: var(--color-light-error); /* Light error background */
-    padding: var(--error-message-padding); /* Padding */
-}
-
-/* Success Messages */
-.success-message {
-    color: var(--color-success); /* Success color */
-    background-color: var(--color-light-success); /* Light success background */
-    padding: var(--success-message-padding); /* Padding */
-}
-
-/* Warning Messages */
-.warning-message {
-    color: var(--color-warning); /* Warning color */
-    background-color: var(--color-light-warning); /* Light warning background */
-    padding: var(--warning-message-padding); /* Padding */
+    content: "";
+    display: table;
+    clear: both;
 }
