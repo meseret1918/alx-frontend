@@ -1,6 +1,6 @@
 :root {
     --section-header-align: center;
-    --section-tagline-transform: uppercase; /* Custom property for text transformation */
+    --section-tagline-transform: uppercase; /* Define the transform property */
 }
 
 /* Align section-header */
@@ -8,9 +8,15 @@
     text-align: var(--section-header-align);
 }
 
-/* Targeting the section-tagline class */
+/* Styles for the section-tagline */
 .section-tagline {
-    font-family: var(--font-family-title); /* Set font-family */
-    text-transform: var(--section-tagline-transform); /* Use custom property for text-transform */
-    font-weight: var(--font-weight-bold); /* Set font-weight */
+    font-family: var(--font-family-title); /* Set the font family */
+}
+
+.section-tagline {
+    text-transform: var(--section-tagline-transform); /* Apply the transform */
+}
+
+.section-tagline {
+    font-weight: var(--font-weight-bold); /* Set the font weight */
 }
