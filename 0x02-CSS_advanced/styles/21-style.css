@@ -1,26 +1,30 @@
+:root {
+    --root-padding: 16px; /* Example root padding, adjust as necessary */
+}
+
 /* General styles for all col- classes */
 [class^="col-"] {
     float: left; /* Apply float left to all col- classes */
     padding: calc(var(--root-padding) / 2); /* Set padding to half of the root element's padding */
 }
 
-/* Specific column widths (ensure these classes exist) */
+/* Specific column widths */
 .col-1 {
     width: 8.33%; /* Width for 1 column */
 }
 
+.col-1-2, .col-1-3 {
+    float: none; /* Remove float */
+    padding: 0; /* Remove padding */
+}
+
+/* Widths for other columns */
 .col-2 {
     width: 16.66%; /* Width for 2 columns */
 }
 
 .col-3 {
     width: 25%; /* Width for 3 columns */
-}
-
-/* Remove float and padding from specific classes */
-.col-1-2, .col-1-3 {
-    float: none; /* Remove float */
-    padding: 0; /* Remove padding */
 }
 
 /* Clearfix for floated elements */
