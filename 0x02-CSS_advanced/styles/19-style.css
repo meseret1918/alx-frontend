@@ -1,32 +1,43 @@
+/* Custom Property */
 :root {
-    --section-tagline-margin: 0; /* Ensure this is set to 0 as specified */
-    --padding-half: calc(var(--section-padding) / 2); /* New variable for half of the section padding */
+    --section-tagline-margin: 0; /* Set the custom property to 0 */
   }
   
-  /* Example selectors for col-1-3 and col-1-2 classes */
+  /* Section Tagline */
+  .section-tagline {
+    margin: var(--section-tagline-margin); /* Set margins to section-tagline-margin */
+  }
+  
+  /* Styles for all ul with class row */
+  .row {
+    margin: 0; /* 0 margins all around */
+    padding: 0; /* No padding all around */
+    list-style: none; /* Remove default list styles */
+  }
+  
+  /* col-1-3 class */
   .col-1-3 {
-    width: 33.33%;
-    float: left;
-    padding: var(--padding-half); /* Ensure this is correctly referencing the half padding */
+    width: 33.33%; /* Width set to 33.33% of its parent */
+    float: left; /* Float it to the left */
+    padding: calc(var(--root-padding) / 2); /* Set padding to half of the root element */
   }
   
+  /* col-1-2 class */
   .col-1-2 {
-    width: 50%;
-    float: left;
-    padding: var(--padding-half); /* Ensure this is correctly referencing the half padding */
+    width: 50%; /* Width set to 50% of the parent */
+    float: left; /* Float it to the left */
+    padding: calc(var(--root-padding) / 2); /* Set padding to half of the root element */
   }
   
-  /* Footer styles */
-  .footer ul {
-    text-align: right; /* Ensure this aligns the text in footer lists to the right */
-    margin: 0; /* Reset margin */
-    padding: 0; /* Reset padding */
-    list-style: none; /* Ensure the list style is none */
-  }
-  
+  /* footer-copyright class */
   .footer-copyright {
-    margin: 0; /* Ensure this is set to 0 */
-    font-size: var(--font-size-small); /* Set to small font size */
-    color: var(--text-color); /* Set to text color */
+    margin: 0; /* No margins */
+    font-size: var(--font-size-small); /* Set the font size to font-size-small */
+    color: var(--text-color); /* Set the foreground color to text-color */
+  }
+  
+  /* Styles for all ul in the footer class */
+  .footer ul {
+    text-align: right; /* Align text to the right */
   }
   
