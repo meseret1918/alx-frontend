@@ -1,50 +1,50 @@
-.card-work {
-    position: relative; /* Position set to relative */
-    overflow: hidden; /* Overflow set to hidden */
+.card-work .card-outer {
+    position: relative; /* Relatively position the element */
+    overflow: hidden; /* Hide any overflow */
 }
 
-.card-image img {
-    height: 30rem; /* Height set to 30rem */
-    width: 100%; /* Width set to 100% */
-    object-fit: cover; /* Object-fit set to cover */
-    vertical-align: bottom; /* Vertical-align set to bottom */
+.card-work .card-image img {
+    height: 30rem; /* Set height */
+    width: 100%; /* Set width */
+    object-fit: cover; /* Set object-fit */
+    vertical-align: bottom; /* Vertically align to the bottom */
 }
 
-.card-inner {
-    position: absolute; /* Position set to absolute */
-    top: -0.1rem; /* Top set to -0.1rem */
-    left: -0.1rem; /* Left set to -0.1rem */
-    right: -0.1rem; /* Right set to -0.1rem */
-    z-index: 1; /* Z-index set to 1 */
+.card-work .card-inner {
+    position: absolute; /* Absolutely position the element */
+    top: -0.1rem; /* Vertical position */
+    left: -0.1rem; /* Horizontal position */
+    right: -0.1rem; /* Horizontal position */
+    z-index: 1; /* Set z-order */
 }
 
 .card-work:hover .card-inner {
-    background-color: rgba(0, 0, 0, 0.7); /* Background-color set to rgba(0, 0, 0, 0.7) */
+    background-color: rgba(0, 0, 0, 0.7); /* Set background color */
 }
 
-.card-title {
-    text-align: center; /* Text-align set to center */
-    margin: 0; /* Margin set to 0 */
-    opacity: 0; /* Opacity set to 0 */
-    height: 100%; /* Height set to 100% */
-    position: relative; /* Position set to relative */
+.card-work .card-title {
+    text-align: center; /* Center align the text */
+    margin: 0; /* Margins all around should be 0 */
+    opacity: 0; /* Opacity should be set to its lowest value */
+    height: 100%; /* Set height */
+    position: relative; /* Position should be relative */
 }
 
-.card-title a {
-    display: block; /* Display set to block */
-    text-decoration: none; /* Text-decoration set to none */
-    padding-top: 45%; /* Padding-top set to 45% */
+.card-work .card-title a {
+    display: block; /* Make sure elements display as blocks */
+    text-decoration: none; /* Text should not be decorated */
+    padding-top: 45%; /* Padding on the top */
 }
 
-.card-title a::after {
-    position: absolute; /* Position set to absolute */
-    top: 0; /* Top set to 0 */
-    left: 0; /* Left set to 0 */
-    right: 0; /* Right set to 0 */
-    bottom: 0; /* Bottom set to 0 */
-    content: ""; /* Content set to empty */
+.card-work .card-title a::after {
+    position: absolute; /* Absolutely position the selected elements */
+    top: 0; 
+    right: 0; 
+    left: 0; 
+    bottom: 0; 
+    content: ""; /* Content property should have an empty value */
 }
 
 .card-work:hover .card-title {
-    opacity: 1; /* Opacity set to 1 on hover */
+    opacity: 1; /* Set opacity */
 }
