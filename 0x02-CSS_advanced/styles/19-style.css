@@ -1,35 +1,36 @@
 :root {
-    --section-tagline-margin: 0; /* Ensure this is defined */
+    --section-tagline-margin: 0; /* New custom property */
+    --root-padding: 1rem; /* Define root padding if not defined */
 }
 
 .section-tagline {
-    margin: var(--section-tagline-margin);
+    margin: var(--section-tagline-margin); /* Use the custom property */
 }
 
-.row {
-    margin: 0; /* Set margins to 0 */
-    padding: 0; /* Set padding to 0 */
-    list-style: none; /* Remove default list styles */
+ul.row {
+    margin: 0; /* 0 margins all around */
+    padding: 0; /* No padding all around */
+    list-style: none; /* No default styles */
 }
 
 .col-1-3 {
-    width: 33.33%; /* Set width to 33.33% of parent */
+    width: 33.33%; /* Set width to 33.33% of its parent */
     float: left; /* Float to the left */
-    padding: calc(var(--section-padding) / 2); /* Set padding to half of the root padding */
+    padding: calc(var(--root-padding) / 2); /* Set padding to half of the root element */
 }
 
 .col-1-2 {
-    width: 50%; /* Set width to 50% of parent */
+    width: 50%; /* Set width to 50% of the parent */
     float: left; /* Float to the left */
-    padding: calc(var(--section-padding) / 2); /* Set padding to half of the root padding */
+    padding: calc(var(--root-padding) / 2); /* Set padding to half of the root element */
 }
 
 .footer-copyright {
     margin: 0; /* No margins */
     font-size: var(--font-size-small); /* Set font size to small */
-    color: var(--text-color); /* Set text color */
+    color: var(--text-color); /* Set foreground color */
 }
 
 .footer ul {
-    text-align: right; /* Align text to the right for all ul in footer */
+    text-align: right; /* Align text to the right */
 }
