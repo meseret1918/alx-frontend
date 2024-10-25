@@ -5,19 +5,23 @@ This file contains styles for the navbar, including custom properties and layout
 
 /* Custom Properties */
 :root {
-    --font-family-title: 'Arial', sans-serif; /* Replace with your desired font */
-    --font-weight-bold: bold;
-    --font-size-medium: 16px; /* Replace with your desired font size */
-    --nav-item-letter-spacing: 0.04em; /* 4% of the root element */
-    --nav-item-display: inline-block;
-    --nav-item-margin: 0 0 3rem 0; /* 3 times the root element on the bottom */
-    --color-primary: #3498db; /* Replace with your desired color */
-    --nav-item-link-hover: #2980b9; /* Replace with your desired hover color */
+    --navbar-padding: 1rem 0; /* Adjust as needed for navbar */
+    --navbar-menu-margin: 0; /* Margin for navbar menu */
+    --navbar-item-margin: 0 0 3rem; /* Margin for nav items */
+    --navbar-item-font-family: 'Arial', sans-serif; /* Font family for nav items */
+    --navbar-item-font-weight: bold; /* Font weight for nav items */
+    --navbar-item-font-size: 16px; /* Font size for nav items */
+    --navbar-item-letter-spacing: 0.04em; /* Letter spacing for nav items */
+    --navbar-item-display: inline-block; /* Display for nav items */
+    --navbar-link-padding: calc(0.5rem) calc(1rem); /* Padding for nav links */
+    --navbar-link-hover-color: #2980b9; /* Color on hover */
 }
 
 /* Targeting navbar-menu class */
 .navbar-menu {
-    float: right;
+    float: right; /* Float navbar menu to the right */
+    margin: var(--navbar-menu-margin); /* Apply menu margin */
+    padding: var(--navbar-padding); /* Apply padding */
 }
 
 /* Styles for nav class */
@@ -30,21 +34,43 @@ This file contains styles for the navbar, including custom properties and layout
 
 /* Styles for nav-item class */
 .nav .nav-item {
-    font-family: var(--font-family-title); /* Font family */
-    font-weight: var(--font-weight-bold); /* Font weight */
-    font-size: var(--font-size-medium); /* Font size */
-    letter-spacing: var(--nav-item-letter-spacing); /* Letter spacing */
-    display: var(--nav-item-display); /* Display */
-    margin: var(--nav-item-margin); /* Margin */
+    font-family: var(--navbar-item-font-family); /* Font family */
+    font-weight: var(--navbar-item-font-weight); /* Font weight */
+    font-size: var(--navbar-item-font-size); /* Font size */
+    letter-spacing: var(--navbar-item-letter-spacing); /* Letter spacing */
+    display: var(--navbar-item-display); /* Display */
+    margin: var(--navbar-item-margin); /* Margin */
 }
 
 /* Styles for nav-link class */
 .nav .nav-link {
     display: block; /* Block display */
-    padding: calc(0.5rem) calc(1rem); /* Top & Bottom half of root, Left & Right equal to root */
+    padding: var(--navbar-link-padding); /* Apply link padding */
 }
 
 /* Hover effect for nav-link class */
 .nav .nav-link:hover {
-    color: var(--nav-item-link-hover); /* Foreground color on hover */
+    color: var(--navbar-link-hover-color); /* Foreground color on hover */
+}
+
+/* Section Styles (Optional: Include if needed for sections) */
+.section {
+    padding: var(--section-padding);
+}
+
+.section-header {
+    padding: var(--section-header-padding);
+}
+
+.section-body {
+    padding: var(--section-body-padding);
+}
+
+.section-footer {
+    padding: var(--section-footer-padding);
+    text-align: var(--section-footer-align);
+}
+
+.footer {
+    padding: var(--footer-padding);
 }
