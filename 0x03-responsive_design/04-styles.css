@@ -1,0 +1,21 @@
+/* Navbar section */
+@media (max-width: 767px) {
+    :root {
+        --nav-item-margin: 0; /* Override the margin for nav items */
+    }
+
+    .navbar-menu {
+        flex: 1; /* Allow the navbar to take the full available space */
+    }
+
+    header nav {
+        flex-direction: column; /* Stack the menu items vertically */
+        overflow: hidden; /* Prevent overflow */
+        max-height: 0; /* Initially hide the menu */
+        transition: max-height .2s ease-out; /* Smooth transition */
+    }
+
+    .menu-btn:checked + .menu-icon + .navbar-menu {
+        max-height: 500px; /* Adjust this value to fit your menu */
+    }
+}
