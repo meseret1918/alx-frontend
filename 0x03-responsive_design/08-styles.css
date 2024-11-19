@@ -1,0 +1,19 @@
+/* Card WORK */
+
+/* Other styles here */
+
+/* Improve the "Works" section */
+@media (max-width: 767px) {
+    .card-work .card-inner {
+        --text-color: var(--color-white); /* Set text color variable to color-white */
+        position: relative; /* Set position to relative */
+    }
+
+    .card-work .card-title {
+        opacity: 1; /* Set opacity to 1 for card titles */
+    }
+
+    .card-work .card-title a {
+        padding: 2rem 1rem 0 1rem; /* Set padding for links inside card titles */
+    }
+}

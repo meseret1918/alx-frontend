@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="03-styles.css">
+    <title>Responsive Images</title>
+</head>
+<body>
+    <h1>Responsive Image Gallery</h1>
+
+    <div class="image-container">
+        <img
+            sizes="(max-width: 3000px) 40vw, 1200px"
+            srcset="
+                pic-about-01_pvbmwe_c_scale,w_380.jpg 380w,
+                pic-about-01_pvbmwe_c_scale,w_855.jpg 855w,
+                pic-about-01_pvbmwe_c_scale,w_1200.jpg 1200w"
+            src="pic-about-01_pvbmwe_c_scale,w_1200.jpg"
+            alt="About Us">
+        <p class="caption">About Us</p>
+    </div>
+
+    <div class="image-container">
+        <img
+            sizes="(max-width: 3000px) 40vw, 1200px"
+            srcset="
+                pic-article-01_uvbuxm_c_scale,w_380.jpg 380w,
+                pic-article-01_uvbuxm_c_scale,w_883.jpg 883w,
+                pic-article-01_uvbuxm_c_scale,w_1200.jpg 1200w"
+            src="pic-article-01_uvbuxm_c_scale,w_1200.jpg"
+            alt="Article 01">
+        <p class="caption">Article 01</p>
+    </div>
+
+    <div class="image-container">
+        <img
+            sizes="(max-width: 3000px) 40vw, 1200px"
+            srcset="
+                pic-article-02_fst18g_c_scale,w_380.jpg 380w,
+                pic-article-02_fst18g_c_scale,w_1026.jpg 1026w,
+                pic-article-02_fst18g_c_scale,w_1200.jpg 1200w"
+            src="pic-article-02_fst18g_c_scale,w_1200.jpg"
+            alt="Article 02">
+        <p class="caption">Article 02</p>
+    </div>
+
+    <div class="image-container">
+        <img
+            sizes="(max-width: 3000px) 40vw, 1200px"
+            srcset="
+                pic-article-03_aheqwh_c_scale,w_380.jpg 380w,
+                pic-article-03_aheqwh_c_scale,w_925.jpg 925w,
+                pic-article-03_aheqwh_c_scale,w_1200.jpg 1200w"
+            src="pic-article-03_aheqwh_c_scale,w_1200.jpg"
+            alt="Article 03">
+        <p class="caption">Article 03</p>
+    </div>
+</body>
+</html>

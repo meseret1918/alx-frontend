@@ -1,0 +1,124 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    font-size: 16px; /* Base font size */
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header */
+  .header {
+    padding: 20px 0;
+  }
+  
+  /* Navigation */
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+  }
+  
+  .nav-item {
+    margin: 0 10px;
+  }
+  
+  .menu-btn {
+    display: none; /* Hide the checkbox for mobile */
+  }
+  
+  /* Main Article */
+  .main-article {
+    padding: 20px 0;
+  }
+  
+  .post-content {
+    margin-bottom: 20px;
+  }
+  
+  /* Images */
+  figure {
+    margin: 20px 0;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto; /* Ensure images are responsive */
+  }
+  
+  /* Headings */
+  h1, h2 {
+    font-size: 1.5rem; /* Base font size for headings */
+    margin: 1rem 0;
+  }
+  
+  /* Blockquotes */
+  blockquote {
+    padding: 10px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    border-left: 4px solid #ccc;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar-menu {
+      display: none; /* Hide menu on smaller screens */
+      flex-direction: column;
+      position: absolute;
+      background-color: #333;
+      width: 100%;
+    }
+  
+    .menu-btn:checked + .menu-icon + .navbar-menu {
+      display: flex; /* Show menu when checked */
+    }
+  
+    .header-logo {
+      text-align: center;
+    }
+    
+    .nav {
+      flex-direction: column;
+      padding: 10px 0;
+    }
+  
+    .nav-item {
+      margin: 5px 0;
+      text-align: center;
+    }
+  
+    .post-content {
+      padding: 10px; /* Padding for post content */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.25rem; /* Adjust heading size for smaller screens */
+    }
+  
+    h2 {
+      font-size: 1.1rem;
+    }
+  
+    .post-meta-list {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  

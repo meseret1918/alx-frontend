@@ -1,0 +1,14 @@
+/* Update Hero Banner Styles */
+.hero-homepage {
+    background-position: 65% 8rem;
+    background-size: 90rem auto;
+    background-repeat: no-repeat;
+}
+
+/* Update Section-Inner within Section-Hero */
+.section-hero .section-inner {
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

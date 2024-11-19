@@ -1,0 +1,57 @@
+/* Navbar section */
+.navbar-menu {
+    display: flex; /* Adjust display to flex for layout */
+    transition: max-height .2s ease-out; /* Transition for smooth height change */
+}
+
+/* Media query for responsive design */
+@media (max-width: 767px) {
+    /* Root global selector to override CSS variable */
+    :root {
+        --nav-item-margin: 0; /* Set margin to 0 for nav items */
+    }
+
+    .navbar-menu {
+        flex: 1; /* Allow menu to flex */
+        flex-direction: column; /* Stack items vertically */
+        overflow: hidden; /* Hide overflow */
+        max-height: 0; /* Initially hide the menu */
+    }
+
+    /* When the checkbox is checked, show the menu */
+    .menu-btn:checked + .menu-icon + .navbar-menu {
+        max-height: 500px; /* Set a max height to show the menu */
+    }
+
+    /* Menu icon styles */
+    .menu-icon {
+        cursor: pointer; /* Change cursor to pointer for clickable icon */
+    }
+
+    /* Styling for the navicon */
+    .navicon {
+        display: block; /* Show navicon */
+        width: 30px; /* Set width */
+        height: 2px; /* Set height */
+        background-color: #333; /* Color of the navicon */
+        position: relative; /* Position relative for positioning pseudo-elements */
+    }
+
+    .navicon::before,
+    .navicon::after {
+        content: ""; /* Create empty pseudo-elements */
+        display: block; /* Display them as block */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: #333; /* Color */
+        position: absolute; /* Position absolutely */
+    }
+
+    .navicon::before {
+        top: -10px; /* Position above the navicon */
+    }
+
+    .navicon::after {
+        bottom: -10px; /* Position below the navicon */
+    }
+}

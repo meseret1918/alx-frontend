@@ -1,0 +1,39 @@
+/* Basic reset for margins and paddings */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Image container styles */
+.image-container {
+    margin: 20px 0;  /* Spacing around images */
+    text-align: center; /* Centering images */
+}
+
+/* Image styles */
+img {
+    max-width: 100%;  /* Ensure images are responsive */
+    height: auto;     /* Maintain aspect ratio */
+    display: block;   /* Remove gaps under images */
+}
+
+/* Caption styles */
+.caption {
+    font-size: 0.9em;
+    color: #555;      /* Color for caption text */
+    margin-top: 5px; /* Space above captions */
+}
+
+/* Media queries for additional responsiveness */
+@media (max-width: 600px) {
+    .image-container {
+        margin: 10px 0; /* Less margin on smaller screens */
+    }
+}
